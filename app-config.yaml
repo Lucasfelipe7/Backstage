@@ -17,6 +17,8 @@ backend:
     allow:
       - host: 'gist.githubusercontent.com'
       - host: 'github.com'
+      - host: 'projetos.tce.rn.gov.br'
+      - host: 'dev-intratce.tce.rn.gov.br' 
 
   baseUrl: http://localhost:7007
   listen:
@@ -99,8 +101,12 @@ catalog:
     entityFilename: catalog-info.yaml
     pullRequestBranchName: backstage-integration
   rules:
-    - allow: [Component, System, API, Resource, Location, Group, User]
+    - allow: [Component, System, API, Resource, Location, Group, User, Domain]
   locations:
+    # Catálogo central do TENTACULUS
+    - type: url
+      target: https://projetos.tce.rn.gov.br/devops/tentaculus/catalog/locations.yaml
+
     # Local example data, file locations are relative to the backend process, typically `packages/backend`
     - type: file
       target: ../../examples/entities.yaml
