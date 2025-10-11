@@ -116,6 +116,12 @@ catalog:
       target: ../../examples/template/template.yaml
       rules:
         - allow: [Template]
+    
+    # Template duplicado
+    - type: file
+      target: ../../examples/teste/template.yaml
+      rules:
+        - allow: [Template]
 
     # Local example organizational data
     - type: file
