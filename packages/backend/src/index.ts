@@ -16,6 +16,11 @@ import {
 
 import { stringifyEntityRef, DEFAULT_NAMESPACE } from '@backstage/catalog-model';
 
+import {
+  gitlabPlugin,
+  catalogPluginGitlabFillerProcessorModule,
+} from '@immobiliarelabs/backstage-plugin-gitlab-backend';
+
 const backend = createBackend();
 
 backend.add(import('@backstage/plugin-app-backend'));
@@ -119,7 +124,11 @@ const customAuth = createBackendModule({
 backend.add(import('@backstage/plugin-auth-backend'));
 backend.add(customAuth);
 
-//Scaffolder
+// Scaffolder
 backend.add(import('@backstage/plugin-scaffolder-backend-module-cookiecutter'));
+
+// CI/CD
+backend.add(gitlabPlugin);
+backend.add(catalogPluginGitlabFillerProcessorModule);
 
 backend.start();

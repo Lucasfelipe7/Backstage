@@ -58,6 +58,11 @@ import {
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
 
+import {
+  isGitlabAvailable,
+  EntityGitlabContent,
+} from '@immobiliarelabs/backstage-plugin-gitlab';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -149,8 +154,8 @@ const serviceEntityPage = (
       {overviewContent}
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/ci-cd" title="CI/CD">
-      {cicdContent}
+    <EntityLayout.Route if={isGitlabAvailable} path="/ci-cd" title="CI/CD">
+      <EntityGitlabContent />
     </EntityLayout.Route>
 
     <EntityLayout.Route
@@ -172,7 +177,7 @@ const serviceEntityPage = (
       </Grid>
     </EntityLayout.Route>
 
-    <EntityLayout.Route path="/dependencies" title="Dependencies">
+    {/* <EntityLayout.Route path="/dependencies" title="Dependencies">
       <Grid container spacing={3} alignItems="stretch">
         <Grid item md={6}>
           <EntityDependsOnComponentsCard variant="gridItem" />
@@ -181,7 +186,7 @@ const serviceEntityPage = (
           <EntityDependsOnResourcesCard variant="gridItem" />
         </Grid>
       </Grid>
-    </EntityLayout.Route>
+    </EntityLayout.Route> */}
 
     <EntityLayout.Route path="/docs" title="Docs">
       {techdocsContent}
