@@ -63,6 +63,11 @@ import {
   EntityGitlabContent,
 } from '@immobiliarelabs/backstage-plugin-gitlab';
 
+import { EntitySonarQubeCard } from '@backstage-community/plugin-sonarqube';
+import { isSonarQubeAvailable } from '@backstage-community/plugin-sonarqube-react';
+
+import { SonarQubeRelatedEntitiesOverview } from '@backstage-community/plugin-sonarqube';
+
 const techdocsContent = (
   <EntityTechdocsContent>
     <TechDocsAddons>
@@ -145,6 +150,14 @@ const overviewContent = (
     <Grid item md={8} xs={12}>
       <EntityHasSubcomponentsCard variant="gridItem" />
     </Grid>
+
+    <EntitySwitch>
+      <EntitySwitch.Case if={isSonarQubeAvailable}>
+        <Grid item md={6}>
+          <EntitySonarQubeCard variant="gridItem" />
+        </Grid>
+      </EntitySwitch.Case>
+    </EntitySwitch>
   </Grid>
 );
 
@@ -377,6 +390,12 @@ const systemPage = (
           RELATION_DEPENDS_ON,
         ]}
         unidirectional={false}
+      />
+    </EntityLayout.Route>
+    <EntityLayout.Route path="/sonarqube" title="Code Quality">
+      <SonarQubeRelatedEntitiesOverview
+        relationType={RELATION_HAS_PART}
+        entityKind="component"
       />
     </EntityLayout.Route>
   </EntityLayout>

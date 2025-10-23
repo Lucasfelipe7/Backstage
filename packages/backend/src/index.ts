@@ -132,4 +132,7 @@ backend.add(import('@backstage/plugin-scaffolder-backend-module-gitlab'));
 backend.add(gitlabPlugin);
 backend.add(catalogPluginGitlabFillerProcessorModule);
 
+// SonarQube
+backend.add(import('@backstage-community/plugin-sonarqube-backend'));
+
 backend.start();

@@ -146,3 +146,9 @@ kubernetes:
 permission:
   # setting this to `false` will disable permissions
   enabled: true
+
+sonarqube:
+  instances:
+    - name: default
+      baseUrl: https://sonar.tce.rn.gov.br
+      apiKey: ${TOKEN_SONAR}
