@@ -37,6 +37,7 @@
     "@backstage/plugin-scaffolder-backend": "^2.2.0",
     "@backstage/plugin-scaffolder-backend-module-cookiecutter": "^0.3.15",
     "@backstage/plugin-scaffolder-backend-module-github": "^0.9.0",
+    "@backstage/plugin-scaffolder-backend-module-gitlab": "^0.9.6",
     "@backstage/plugin-scaffolder-backend-module-notifications": "^0.1.13",
     "@backstage/plugin-search-backend": "^2.0.5",
     "@backstage/plugin-search-backend-module-catalog": "^0.3.7",

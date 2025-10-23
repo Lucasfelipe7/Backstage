@@ -126,6 +126,7 @@ backend.add(customAuth);
 
 // Scaffolder
 backend.add(import('@backstage/plugin-scaffolder-backend-module-cookiecutter'));
+backend.add(import('@backstage/plugin-scaffolder-backend-module-gitlab'));
 
 // CI/CD
 backend.add(gitlabPlugin);
