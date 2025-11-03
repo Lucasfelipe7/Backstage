@@ -1,0 +1,7 @@
+﻿{
+  "ConnectionStrings": {
+    "BdMensagem_uMensagem_Config": "Data Source=sql-feature,59012;uid=uMensagem;password=feature@123;Initial Catalog=BdMensagem;",
+    "Bdc_uACL_Config": "Data Source=sql-feature,59012;uid=uACL;Password=feature@123;Initial Catalog=BDC;MultipleActiveResultSets=true",
+    "Bdc_uLogErrorApp_Config": "Data Source=sql-hotfix,59456;uid=uLogErrorApp;password=hotfix@123;Initial Catalog=BdLogErroAPP;"
+  }
+}

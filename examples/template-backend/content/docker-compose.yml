@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  backend:
+    container_name: backend
+    build: .
+    ports:
+      - 9090:8080
+    environment:
+      ApplicationInfo__Name: <<template>>
+      ApplicationInfo__Description: <<template>> - API
+      ApplicationInfo__Environment: dev
+      ApplicationInfo__Version: 1.0.0
+      TceAdmin2__BaseURL: https://dev-tceadmin2.tce.rn.gov.br/api/
+      
