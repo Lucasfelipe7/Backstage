@@ -117,6 +117,12 @@ catalog:
       rules:
         - allow: [Template]
     
+    # Local example template
+    - type: file
+      target: ../../examples/template-backend/template.yaml
+      rules:
+        - allow: [Template]
+    
     # Template duplicado
     - type: file
       target: ../../examples/teste/template.yaml
