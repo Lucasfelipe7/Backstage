@@ -39,6 +39,9 @@ import { NotificationsPage } from '@backstage/plugin-notifications';
 import { SignalsDisplay } from '@backstage/plugin-signals';
 import { gitlabAuthApiRef } from '@backstage/core-plugin-api';
 
+import { myTheme, myDarkTheme } from './themes';
+import { UnifiedThemeProvider } from '@backstage/theme';
+
 const app = createApp({
   apis,
   bindRoutes({ bind }) {
@@ -69,6 +72,24 @@ const app = createApp({
           },
         ]} />,
   },
+  themes: [
+    {
+      id: 'light',
+      title: 'Light theme',
+      variant: 'light',
+      Provider: ({ children }) => (
+        <UnifiedThemeProvider theme={myTheme} children={children} />
+      ),
+    },
+    {
+      id: 'dark',
+      title: 'Dark theme',
+      variant: 'dark',
+      Provider: ({ children }) => (
+        <UnifiedThemeProvider theme={myDarkTheme}>{children}</UnifiedThemeProvider>
+      ),
+    },
+  ],
 });
 
 const routes = (
