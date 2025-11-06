@@ -57,6 +57,7 @@ import {
   EntityKubernetesContent,
   isKubernetesAvailable,
 } from '@backstage/plugin-kubernetes';
+import { KubernetesMetricsTable } from '../../KubernetesMetricsTable';
 
 import {
   isGitlabAvailable,
@@ -171,14 +172,6 @@ const serviceEntityPage = (
       <EntityGitlabContent />
     </EntityLayout.Route>
 
-    <EntityLayout.Route
-      path="/kubernetes"
-      title="Kubernetes"
-      if={isKubernetesAvailable}
-    >
-      <EntityKubernetesContent />
-    </EntityLayout.Route>
-
     <EntityLayout.Route path="/api" title="API">
       <Grid container spacing={3} alignItems="stretch">
         <Grid item md={6}>
@@ -188,6 +181,14 @@ const serviceEntityPage = (
           <EntityConsumedApisCard />
         </Grid>
       </Grid>
+    </EntityLayout.Route>
+
+    <EntityLayout.Route
+      path="/kubernetes"
+      title="Kubernetes"
+    >
+      <KubernetesMetricsTable />
+      <EntityKubernetesContent />
     </EntityLayout.Route>
 
     {/* <EntityLayout.Route path="/dependencies" title="Dependencies">

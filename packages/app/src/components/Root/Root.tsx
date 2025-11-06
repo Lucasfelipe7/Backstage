@@ -29,6 +29,12 @@ import { MyGroupsSidebarItem } from '@backstage/plugin-org';
 import GroupIcon from '@material-ui/icons/People';
 import { NotificationsSidebarItem } from '@backstage/plugin-notifications';
 
+import Widgets from '@material-ui/icons/Widgets';
+import CloudIcon from '@material-ui/icons/Cloud';
+
+import AssessmentIcon from '@material-ui/icons/Assessment';
+
+
 const useSidebarLogoStyles = makeStyles({
   root: {
     width: sidebarConfig.drawerWidthClosed,
@@ -78,6 +84,17 @@ export const Root = ({ children }: PropsWithChildren<{}>) => (
         <SidebarItem icon={CreateComponentIcon} to="create" text="Create..." />
         {/* End global nav */}
         <SidebarDivider />
+
+
+        <SidebarGroup label="Plugins Integrados" icon={<Widgets />}>
+          <SidebarItem icon={CloudIcon} to="/kubernetes" text="Kubernetes" />
+          <SidebarItem
+            icon={AssessmentIcon}
+            to="https://sonar.tce.rn.gov.br/projects"
+            text="SonarQube"
+            target="_blank"
+          />
+        </SidebarGroup>
         <SidebarScrollWrapper>
           {/* Items in this group will be scrollable if they run out of space */}
         </SidebarScrollWrapper>

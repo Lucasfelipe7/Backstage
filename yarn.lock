@@ -3874,6 +3874,21 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@backstage/plugin-kubernetes-common@npm:^0.9.7":
+  version: 0.9.7
+  resolution: "@backstage/plugin-kubernetes-common@npm:0.9.7"
+  dependencies:
+    "@backstage/catalog-model": "npm:^1.7.5"
+    "@backstage/plugin-permission-common": "npm:^0.9.2"
+    "@backstage/types": "npm:^1.2.2"
+    "@kubernetes/client-node": "npm:1.1.2"
+    kubernetes-models: "npm:^4.3.1"
+    lodash: "npm:^4.17.21"
+    luxon: "npm:^3.0.0"
+  checksum: 10c0/e752c33262a0d5bcf40724bb19a34dc30990d231926361befdf97b8412636a9cab0a30b654677adf32b7eb7b1c33b711708320360585c5b0a40560c16d36eff0
+  languageName: node
+  linkType: hard
+
 "@backstage/plugin-kubernetes-node@npm:^0.3.3":
   version: 0.3.3
   resolution: "@backstage/plugin-kubernetes-node@npm:0.3.3"
@@ -3889,16 +3904,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@backstage/plugin-kubernetes-react@npm:^0.5.10":
-  version: 0.5.10
-  resolution: "@backstage/plugin-kubernetes-react@npm:0.5.10"
+"@backstage/plugin-kubernetes-react@npm:^0.5.12":
+  version: 0.5.12
+  resolution: "@backstage/plugin-kubernetes-react@npm:0.5.12"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
-    "@backstage/core-components": "npm:^0.17.5"
-    "@backstage/core-plugin-api": "npm:^1.10.9"
+    "@backstage/core-components": "npm:^0.18.2"
+    "@backstage/core-plugin-api": "npm:^1.11.1"
     "@backstage/errors": "npm:^1.2.7"
-    "@backstage/plugin-kubernetes-common": "npm:^0.9.6"
-    "@backstage/types": "npm:^1.2.1"
+    "@backstage/plugin-kubernetes-common": "npm:^0.9.7"
+    "@backstage/types": "npm:^1.2.2"
     "@kubernetes-models/apimachinery": "npm:^2.0.0"
     "@kubernetes-models/base": "npm:^5.0.0"
     "@kubernetes/client-node": "npm:1.1.2"
@@ -3922,35 +3937,24 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/dfb747d01696fb12453ca2dd0370b5b515914c063cece92892ec96d925d3cd595aafc55c6a534e2c0ce48ece70cf996d3020a8ef9fb26e8475453bcd8c48ccfc
+  checksum: 10c0/2289366ddb7edc1d61001c12aa601a5a5ce14f33822ff0b338c1187407ec95e6f35503542e07c2965bce2d4730a6ed4e53e5dd468021289d84f9f45d6d1af4ce
   languageName: node
   linkType: hard
 
-"@backstage/plugin-kubernetes@npm:^0.12.10":
-  version: 0.12.10
-  resolution: "@backstage/plugin-kubernetes@npm:0.12.10"
+"@backstage/plugin-kubernetes@npm:^0.12.12":
+  version: 0.12.12
+  resolution: "@backstage/plugin-kubernetes@npm:0.12.12"
   dependencies:
     "@backstage/catalog-model": "npm:^1.7.5"
-    "@backstage/core-compat-api": "npm:^0.5.0"
-    "@backstage/core-components": "npm:^0.17.5"
-    "@backstage/core-plugin-api": "npm:^1.10.9"
-    "@backstage/frontend-plugin-api": "npm:^0.11.0"
-    "@backstage/plugin-catalog-react": "npm:^1.20.0"
-    "@backstage/plugin-kubernetes-common": "npm:^0.9.6"
-    "@backstage/plugin-kubernetes-react": "npm:^0.5.10"
-    "@backstage/plugin-permission-react": "npm:^0.4.36"
-    "@kubernetes-models/apimachinery": "npm:^2.0.0"
-    "@kubernetes-models/base": "npm:^5.0.0"
-    "@kubernetes/client-node": "npm:1.1.2"
+    "@backstage/core-compat-api": "npm:^0.5.3"
+    "@backstage/core-components": "npm:^0.18.2"
+    "@backstage/core-plugin-api": "npm:^1.11.1"
+    "@backstage/frontend-plugin-api": "npm:^0.12.1"
+    "@backstage/plugin-catalog-react": "npm:^1.21.2"
+    "@backstage/plugin-kubernetes-common": "npm:^0.9.7"
+    "@backstage/plugin-kubernetes-react": "npm:^0.5.12"
+    "@backstage/plugin-permission-react": "npm:^0.4.37"
     "@material-ui/core": "npm:^4.12.2"
-    "@xterm/addon-attach": "npm:^0.11.0"
-    "@xterm/addon-fit": "npm:^0.10.0"
-    "@xterm/xterm": "npm:^5.5.0"
-    cronstrue: "npm:^2.2.0"
-    js-yaml: "npm:^4.0.0"
-    kubernetes-models: "npm:^4.1.0"
-    lodash: "npm:^4.17.21"
-    luxon: "npm:^3.0.0"
   peerDependencies:
     "@types/react": ^17.0.0 || ^18.0.0
     react: ^17.0.0 || ^18.0.0
@@ -3959,7 +3963,7 @@ __metadata:
   peerDependenciesMeta:
     "@types/react":
       optional: true
-  checksum: 10c0/2a0940810296c4554878fe5364f63fd13280d9191865e186b26795d1ad0d53de8aabb7b3d7b7ad13f12073a80313171235018c6724bf7301499dfd6ba64fd854
+  checksum: 10c0/9db3234f7b4ea8fc660eb6b9948a924f42e0e26de1364fc5e892c3d2624511296e57c88eaec88cd231a9828ba6a2b1cc70c25c7eda7233a6b8ae5bfdb118e534
   languageName: node
   linkType: hard
 
@@ -15650,7 +15654,7 @@ __metadata:
     "@backstage/plugin-catalog-graph": "npm:^0.4.22"
     "@backstage/plugin-catalog-import": "npm:^0.13.4"
     "@backstage/plugin-catalog-react": "npm:^1.20.1"
-    "@backstage/plugin-kubernetes": "npm:^0.12.10"
+    "@backstage/plugin-kubernetes": "npm:^0.12.12"
     "@backstage/plugin-notifications": "npm:^0.5.8"
     "@backstage/plugin-org": "npm:^0.6.42"
     "@backstage/plugin-permission-react": "npm:^0.4.36"
@@ -18038,7 +18042,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cronstrue@npm:^2.2.0, cronstrue@npm:^2.32.0":
+"cronstrue@npm:^2.32.0":
   version: 2.59.0
   resolution: "cronstrue@npm:2.59.0"
   bin:
@@ -24639,7 +24643,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"kubernetes-models@npm:^4.1.0, kubernetes-models@npm:^4.3.1":
+"kubernetes-models@npm:^4.3.1":
   version: 4.5.1
   resolution: "kubernetes-models@npm:4.5.1"
   dependencies:

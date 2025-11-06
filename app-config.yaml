@@ -123,6 +123,12 @@ catalog:
       rules:
         - allow: [Template]
     
+    # Local example template
+    - type: file
+      target: ../../examples/template-backesss/template.yaml
+      rules:
+        - allow: [Template]
+
     # Template duplicado
     - type: file
       target: ../../examples/teste/template.yaml
@@ -146,12 +152,23 @@ catalog:
     #     - allow: [User, Group]
 
 kubernetes:
-  # see https://backstage.io/docs/features/kubernetes/configuration for kubernetes configuration options
-
-# see https://backstage.io/docs/permissions/getting-started for more on the permission framework
-permission:
-  # setting this to `false` will disable permissions
-  enabled: true
+  frontend:
+    podDelete:
+      enabled: true
+  serviceLocatorMethod:
+    type: 'multiTenant'
+  clusterLocatorMethods:
+    - type: 'config'
+      clusters:
+        - url: https://10.24.0.184:6443/
+          name: minikube
+          authProvider: 'serviceAccount'
+          skipTLSVerify: true
+          skipMetricsLookup: false
+          serviceAccountToken: ${K8S_MINIKUBE_TOKEN}
+          caData: ${K8S_CONFIG_CA_DATA} 
+          metrics:
+            enabled: true
 
 sonarqube:
   instances:
